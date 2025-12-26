@@ -232,7 +232,11 @@ async function songchange() {
 
     if (album_uri && !album_uri.includes("spotify:show")) {
         const albumInfo = await getAlbumInfo(album_uri.replace("spotify:album:", ""));
-        let album_date = new Date(albumInfo.release_date);
+        // prevent Invalid Date if month/day is missing
+        let release_date = albumInfo.release_date;
+        if (release_date.length == 4) release_date += "-01-01";
+        if (release_date.length == 7) release_date += "-01";
+        let album_date = new Date(release_date);
         let recent_date = new Date();
         recent_date.setMonth(recent_date.getMonth() - 6);
         album_date = album_date.toLocaleString("default", album_date > recent_date ? { year: "numeric", month: "short" } : { year: "numeric" });
