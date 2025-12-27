@@ -164,9 +164,8 @@ img.main-devicePicker-nowPlayingActiveIcon,
     background-color: rgba(var(--spice-rgb-subtext), 0.2) !important;
 }
 
-.main-tag-explicit {
-    filter: unset !important;
-    --text-subdued: var(--spice-subtext) !important;
+.main-tag-explicit svg {
+    filter: none !important;
 }
 
 /* album year info */
