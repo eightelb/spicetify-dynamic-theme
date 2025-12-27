@@ -159,7 +159,6 @@ img.main-devicePicker-nowPlayingActiveIcon,
 }
 
 /* explicit lyrics icon */
-.main-trackList-rowBadges > span:not(.main-tag-explicit),
 .main-tag-container {
     color: var(--spice-subtext);
     background-color: rgba(var(--spice-rgb-subtext), 0.2) !important;
