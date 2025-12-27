@@ -166,6 +166,7 @@ img.main-devicePicker-nowPlayingActiveIcon,
 
 .main-tag-explicit {
     filter: unset !important;
+    --text-subdued: var(--spice-subtext) !important;
 }
 
 /* album year info */
